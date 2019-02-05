@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    
+    <DB>
+
+      <setting name="CONNECTION_STRING" serializeAs="String">
+         <!--<value>Database=EDW_MAS;UserID=db2admin;Password=Passw0rd;Server=EDEMUMKALAPP005</value>-->
+		 <value>Provider=IBMDADB2;Database=SAMPLE;Hostname=172.16.8.75;Port=50000;Uid=db2admin;Pwd=mits123$;Protocol=TCPIP</value>
+      </setting>
+
+<setting name="ENTITY_SELECT" serializeAs="String">
+        <value>select distinct ENTITY from ADMINISTRATOR.ENTITY_E order by ENTITY asc</value>
+      </setting>
+<setting name="FUNCTION_SELECT" serializeAs="String">
+        <value>select distinct FUNCTION from ADMINISTRATOR.FUNCTION_E order by FUNCTION asc</value>
+      </setting>
+<setting name="SUBFUNCTION_SELECT" serializeAs="String">
+        <value>select distinct SUBFUNCTION from ADMINISTRATOR.FUNCTION_E where FUNCTION=':SUBFUNCTION'</value>
+      </setting>
+<setting name="STATE" serializeAs="String">
+        <value>select STATECODE from ADMINISTRATOR.STATECODE_E where TIN_NUMBER=':STATECODE'</value>
+      </setting>
+    </DB>
+  
+  
+</configuration>
